@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+    <link rel="stylesheet" href="css/JavaScriptQuiz1.css">
+    
+  
+    
+<style type="text/css">   
+.button_example{
+border:1px solid #34740e; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; font-size:12px;font: small-caps bold small/24px "Times New Roman", serif; padding: 10px 10px 10px 10px; text-align: center; text-decoration:none; list-style-type: none;
+        display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #c5bb83; border-bottom: 4px solid #845108;
+ background-color: #003000; background-image: -webkit-gradient(linear, left top, left bottom, from(#005900), to(#008c00));
+ background-image: -webkit-linear-gradient(top, #003000, #008c00);
+ background-image: -moz-linear-gradient(top, #003000, #008c00);
+ background-image: -ms-linear-gradient(top, #003000, #008c00);
+ background-image: -o-linear-gradient(top, #003000, #008c00);
+ background-image: linear-gradient(to bottom, #003000, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+}
+
+.button_example:hover{
+ border:1px solid #224b09;
+ background-color: #36780f; background-image: -webkit-gradient(linear, left top, left bottom, from(#36780f), to(#005900)); color: #FFFFFF;
+ background-image: -webkit-linear-gradient(top, #005900, #005900);
+ background-image: -moz-linear-gradient(top, #005900, #005900);
+ background-image: -ms-linear-gradient(top, #005900, #005900);
+ background-image: -o-linear-gradient(top, #005900, #005900);
+ background-image: linear-gradient(to bottom, #005900, #005900);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#36780f, endColorstr=#005900); border-bottom: 4px solid #845108;
+}
+</style>
+
+
+
+
+
+<script>
+function ajax_json_gallery(folder){
+    
+    
+
+	var background = document.getElementById("background");
+	var pictureframe = document.getElementById("pictureframe");
+	
+	
+    var hr = new XMLHttpRequest();
+    hr.open("POST", "aquire_folder_content.php", true);
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			background.innerHTML = "<img src='"+data.img1.src+"'>";
+
+	    }
+    }
+    hr.send("folder="+folder);
+
+}
+</script> 
+
+
+
+</head>
+<body>
+    
+<div id="background">
+</div>
+
+<script>
+    ajax_json_gallery('background_image_1');
+</script>
+
+    
+<h2 id="test_status"></h2>
+<div id="test"></div>
+
+
+<div id = "div0"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Javascript Quiz 1!</h1></div>
+
+
+<div id = "div0">
+<div id="navcontainer">
+    <ol id="navlist">
+        <li><a class="button_example" href="../../index.php" title="link to Beerman" style="height:10px; width:130px">CMS 1</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz1.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 1</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz2.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 2</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz3.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 3</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz4.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 4</a></li>
+    </ol>
+</div> 
+</div>
+
+
+
+
+<ol>
+    <div id = "div1">
+       
+    <li>Javascript is what?</li>
+<form name ="JavaScriptQuiz1Quiz">
+
+        <div id = "div2">
+        <input id = "hint1" type = "button" value = "hint" onclick="showHint1()"> </input>
+        <img id="Javascript.jpg"src="img/JavaScriptQuiz1/Javascript.jpg"  style="visibility:hidden"> </input>
+    <ul>
+        <li> <input type = "radio" name = "q1" value = "correct">A dynamic computer programming language</input></li>
+        <li> <input type = "radio" name = "q1" value = "wrong">A pie</input></li>
+        <li> <input type = "radio" name = "q1" value = "wrong">A C# based enumerator</input></li>
+        <li> <input type = "radio" name = "q1" value = "wrong">A multi tasking office package</input></li>
+        <input id = "button1" type = "button" value = "submit" onClick ="checkAll()" onmousedown="showSubmitButton2()" onmouseup ="Hidden1()" >  </input>
+    </ul>
+            </div>
+    </div>
+
+    <div id = "div3">
+        <li>Brenden Eich developed Javascript under he name Mocha<br>
+            but what was it called it called after that and before being<br>
+            named Javascript??</li>
+
+        <div id = "div4">
+        <input id = "hint2" type = "button" value = "hint" onclick="showHint2()"> </input>
+    <img id="Livescript.jpg"src="img/JavaScriptQuiz1/Livescript.jpg"  style="visibility:hidden"> </input>
+    <ul>
+        <li> <input type = "radio" name = "q2" value = "wrong">C</input></li>
+        <li> <input type = "radio" name = "q2" value = "wrong">Brenscript</input></li>
+        <li> <input type = "radio" name = "q2" value = "correct">Livescript</input></li>
+        <li> <input type = "radio" name = "q2" value = "wrong">All sorts of bad names</input></li>
+        <input id = "button2" type = "button" value = "submit" style="visibility:hidden" onClick ="checkAll()" onmousedown="showSubmitButton3()" onmouseup ="Hidden2()">  </input>
+    </ul>
+        </div>
+    </div>
+
+    <div id = "div5">
+        <li>What browser was Javascript first deployed in?</li>
+
+        <div id = "div6">
+        <input id = "hint3" type = "button" value = "hint" onclick="showHint3()"> </input>
+        <img id="Netscape.jpg"src="img/JavaScriptQuiz1/Netscape.jpg"  style="visibility:hidden"> </input>
+    <ul>
+        <li> <input type = "radio" name = "q3" value = "wrong">Google</input></li>
+        <li> <input type = "radio" name = "q3" value = "wrong">Yahoo</input></li>
+        <li> <input type = "radio" name = "q3" value = "wrong">Internet Explorer</input></li>
+        <li> <input type = "radio" name = "q3" value = "correct">Netscape</input></li>
+        <input id = "button3" type = "button" value = "submit" style="visibility:hidden" onClick ="checkAll()" onmousedown="showSubmitButton4()" onmouseup ="Hidden3()">  </input>
+    </ul>
+         </div>
+    </div>
+
+    <div id = "div7">
+        <li>Why if it caused so much confusion with Java was it called Javascript?</li>
+
+        <div id = "div8">
+        <input id = "hint4" type = "button" value = "hint" onclick="showHint4()"> </input>
+        <img id="Launched.jpg"src="img/JavaScriptQuiz1/Launched.jpg"  style="visibility:hidden"> </input>
+    <ul>
+        <li> <input type = "radio" name = "q4" value = "wrong">C2 was considered but legally couldn't be done</input></li>
+        <li> <input type = "radio" name = "q4" value = "wrong">The developers where trying to be funny</input></li>
+        <li> <input type = "radio" name = "q4" value = "correct">It was a marketing ploy for a good impression when launched</input></li>
+        <li> <input type = "radio" name = "q4" value = "wrong">The coding of the language on the server side made it necessary</input></li>
+        <input id = "button4" type = "button" value = "submit" style="visibility:hidden" onClick ="checkAll()" onmousedown="showSubmitButton4()" onmouseup ="Hidden4()">  </input>
+    </ul>
+        </div>
+    </div>
+</ol>
+
+    <div id = "div9">
+    <input type = "button" value = "hello" onClick  ="sayHello()">  </input>
+    <input type = "reset" value = "clear">  </input>
+    <textArea rows = "10" cols = "50" name ="answersBox">The correct answers will display here</textArea>
+    <br>
+    <br>
+    <input id = "HelpButton1" type = "button" value = "Javascript Quiz 1 Help Page" style="visibility:hidden" onclick="JavaScriptQuiz1Help()"> </input>
+    <br>
+    <br>
+    <input id = "RestartButton1" type = "button" value = "Restart Javascript Quiz 1" style="visibility:hidden" onclick="JavaScriptQuiz1RestartTest()"> </input>
+    </div>
+
+</form>
+
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+
+<script src ="js/JavaScriptQuiz1.js"></script>
+<script src ="js/JavaScriptQuiz1.2.js"></script>
+
+</body>
+</html>

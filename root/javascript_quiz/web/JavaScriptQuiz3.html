@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="css/JavaScriptQuiz3.css">
+    
+    
+    
+    
+<style type="text/css">
+.button_example{
+border:1px solid #536687; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; font-s;ize:12px; font: small-caps bold small/24px "Times New Roman", serif; padding: 10px 10px 10px 10px; text-align: center; text-decoration:none; list-style-type: none;
+            display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight: bold; color: #c5bb83; border-bottom: 4px solid #845108;
+ background-color: #23272E; background-image: -webkit-gradient(linear, left top, left bottom, from(#b29af8), to(#9174ed));
+ background-image: -webkit-linear-gradient(top, #23272E, #9174ed);
+ background-image: -moz-linear-gradient(top, #23272E, #9174ed);
+ background-image: -ms-linear-gradient(top, #23272E, #9174ed);
+ background-image: -o-linear-gradient(top, #23272E, #9174ed);
+ background-image: linear-gradient(to bottom, #23272E, #9174ed);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#b29af8, endColorstr=#9174ed);
+}
+
+.button_example:hover{
+ border:1px solid #693bf1;
+ background-color: #8e6af5; background-image: -webkit-gradient(linear, left top, left bottom, from(#8e6af5), to(#6d47e7)); color: #FFFFFF;
+ background-image: -webkit-linear-gradient(top, #8e6af5, #6d47e7);
+ background-image: -moz-linear-gradient(top, #8e6af5, #6d47e7);
+ background-image: -ms-linear-gradient(top, #8e6af5, #6d47e7);
+ background-image: -o-linear-gradient(top, #8e6af5, #6d47e7);
+ background-image: linear-gradient(to bottom, #8e6af5, #6d47e7);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8e6af5, endColorstr=#6d47e7);
+}
+</style>
+
+
+<style>
+img
+{
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: 0px; 
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>
+
+
+
+<script>
+function ajax_json_gallery(folder){
+    
+    
+
+	var background = document.getElementById("background");
+	
+    var hr = new XMLHttpRequest();
+    hr.open("POST", "aquire_folder_content.php", true);
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			background.innerHTML = "<img src='"+data.img1.src+"'>";
+
+	    }
+    }
+    hr.send("folder="+folder);
+
+}
+</script> 
+
+
+
+</head>
+<body>
+    
+    
+<div id="background">
+</div>
+
+
+<script>
+    ajax_json_gallery('background_image_3');
+</script>
+
+
+
+<div id = "div0"><h1>Javascript Quiz 3!</h1></div>
+
+<div id = "navcontainer">
+    <ol id="navlist" style"text-decoration: none;">
+        <li style="list-style:none!important;"><a class="button_example" href="../../index.php" title="" style="height:10px; width:130px;">CMS 1</a></li>
+        <li style="list-style:none!important;"><a class="button_example" href="JavaScriptQuiz1.html" title="" style="height:10px; width:130px;">Javascript Quiz 1</a></li>
+        <li style="list-style:none!important;"><a class="button_example" href="JavaScriptQuiz2.html" title="" style="height:10px; width:130px">Javascript Quiz 2</a></li>
+        <li style="list-style:none!important;"><a class="button_example" href="JavaScriptQuiz3.html" title="" style="height:10px; width:130px">Javascript Quiz 3</a></li>
+        <li style="list-style:none!important;"><a class="button_example" href="JavaScriptQuiz4.html" title="" style="height:10px; width:130px">Javascript Quiz 4</a></li>
+    </ol>
+</div>
+
+<h2 id="test_status"></h2>
+<div id="test"></div>
+
+<div id="HintButtons">
+<input id = "Question1Hint" type = "button" value = "Question 1 Hint" onmousedown="showHintTyping()"onmouseup="hideHintTyping()"> </input>
+
+<input id = "Question2Hint" type = "button" value = "Question 2 Hint" onmousedown="showHintObject()"onmouseup="hideHintObject()"> </input>
+
+<input id = "Question3Hint" type = "button" value = "Question 3 Hint" onmousedown="showHintPrototype()"onmouseup="hideHintPrototype()"> </input>
+
+<input id = "Question4Hint" type = "button" value = "Question 4 Hint" onmousedown="showHintCalling()"onmouseup="hideHintCalling()"> </input>
+</div>
+
+<div id="ShowHints">
+<img id="Typing.jpg"src="img/JavaScriptQuiz3/Typing.jpg"  style="visibility:hidden"> </input>
+
+<img id="Object.jpg"src="img/JavaScriptQuiz3/Object.jpg"  style="visibility:hidden"> </input>
+
+<img id="Prototype.jpg"src="img/JavaScriptQuiz3/Prototype.jpg"  style="visibility:hidden"> </input>
+
+<img id="Calling.png"src="img/JavaScriptQuiz3/Calling.png"  style="visibility:hidden"> </input>
+</div>
+
+<script src ="js/JavaScriptQuiz3.js"></script>
+<script src ="js/JavaScriptQuiz3.2.js"></script>
+</body>
+</html>

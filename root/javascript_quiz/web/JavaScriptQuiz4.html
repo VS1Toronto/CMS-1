@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="css/JavaScriptQuiz4.css">
+    
+    
+    
+    
+    
+<style type="text/css">
+.button_example{
+border:1px solid #001900; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; font-s;ize:12px; font: small-caps bold small/24px "Times New Roman", serif;  padding: 10px 10px 10px 10px; text-align: center; text-decoration:none; list-style-type: none; 
+        display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #777358; border-bottom: 4px solid #777358;
+ background-color: #001900 background-image: -webkit-gradient(linear, left top, left bottom, from(#cef8ff), to(#7fe0f8));
+ background-image: -webkit-linear-gradient(top, #001900, #7fe0f8);
+ background-image: -moz-linear-gradient(top, #001900, #7fe0f8);
+ background-image: -ms-linear-gradient(top, #001900, #7fe0f8);
+ background-image: -o-linear-gradient(top, #001900, #7fe0f8);
+ background-image: linear-gradient(to bottom, #001900, #7fe0f8);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cef8ff, endColorstr=#7fe0f8);
+}
+
+.button_example:hover{
+ border:1px solid #68e9ff;
+ background-color: #9bf1ff; background-image: -webkit-gradient(linear, left top, left bottom, from(#9bf1ff), to(#4fd4f5)); color: #FFFFFF;
+ background-image: -webkit-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: -moz-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: -ms-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: -o-linear-gradient(top, #9bf1ff, #4fd4f5);
+ background-image: linear-gradient(to bottom, #9bf1ff, #4fd4f5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#9bf1ff, endColorstr=#4fd4f5);
+}
+</style>
+
+
+<style>
+img
+{
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: 0px; 
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>
+
+
+
+<script>
+function ajax_json_gallery(folder){
+    
+    
+
+	var background = document.getElementById("background");
+	
+    var hr = new XMLHttpRequest();
+    hr.open("POST", "aquire_folder_content.php", true);
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			background.innerHTML = "<img src='"+data.img1.src+"'>";
+
+	    }
+    }
+    hr.send("folder="+folder);
+
+}
+</script> 
+
+
+
+</head>
+<body>
+    
+    
+<div id="background">
+</div>
+
+
+<script>
+    ajax_json_gallery('background_image_4');
+</script>  
+
+
+    
+<div id="navcontainer">
+    <ol id="navlist">
+        <li><a class="button_example" href="../../index.php" title="link to Beerman" style="height:10px; width:130px">CMS 1</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz1.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 1</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz2.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 2</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz3.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 3</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz4.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 4</a></li>
+    </ol>
+</div>
+
+<div id = "DoorAccessDenied"><div id = "BonusLevelDoorAccessDenied"><img src="img/BonusLevel/Door/BonusLevelDoorAccessDenied.jpg" onclick="Door1()"><div id = "BonusLevelInstructions1">CLICK TO ENTER</div></div></div>
+
+<div id = "DoorAccessGranted" style="visibility:hidden;"><div id = "BonusLevelDoorAccessGranted"><img src="img/BonusLevel/Door/BonusLevelDoorAccessGranted.jpg"  onclick="Door2()" onmouseup="bonusLevelDelay()"><div id = "BonusLevelInstructions2">CLICK TO ENTER</div></div></div>
+
+<script>
+    var fname, lname, gender, country ;
+    function _(x)
+    {
+        return document.getElementById(x);
+    }
+</script>
+
+
+<form name ="JavaScriptQuiz4Quiz" form id="multiphase" onsubmit = "return false">
+
+<div id="progressbar">
+    <progress id="progressBar" value="0" max="100" style="width:250px;"></progress>
+    <h3 id="status">Phase 1 of 3</h3>
+
+</div>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>       
+    <div id ="phase1">
+
+        Inheritance in Javascript is covered by delegation autimatism bound to prototype property what?
+        <br>
+        <br>
+        OOSD Delegation
+        <br>
+        Lawyers
+        <br>
+        Constructor Functions
+        <br>
+        <br>
+        Question 1 First Word: <input id="firstword" name = "firstword"><br>
+        Question 1 Second Word:  <input id="secondword" name = "secondword"><br>
+        <button onclick="processPhase1()">Continue</button>
+    </div>
+
+    <div id ="phase2">
+
+        What is an example of a run time environment Javascript relies on to provide objects and methods?
+        <br>
+        <br>
+        A marathon
+        <br>
+        C#
+        <br>
+        A Web Browser
+        <br>
+        <br>
+      Question 2: <select id="question2" name="question2">
+        <option value="A Marathon">A Marathon</option>
+        <option value="C#">C#</option>
+        <option value="A Web Browser">A Web Browser</option>
+      </select><br>
+      <button onclick="processPhase2()">Continue</button>
+    </div>
+
+    <div id="phase3">
+
+        Javascript can interact with the object and methods provided by a run time environment using what?
+        <br>
+        <br>
+        Hard Drive
+        <br>
+        A toolkit
+        <br>
+        A Webpage DOM
+        <br>
+        <br>
+        Question 3: <select id="question3" name="question3">
+            <option value="Hard Drive">Hard Drive</option>
+            <option value="A toolkit">A toolkit</option>
+            <option value="A Webpage DOM">A Webpage DOM</option>
+        </select><br>
+        <button onclick="processPhase3()">Continue</button>
+    </div>
+
+
+    <div id="show_all_data">
+        Question 1 First Word : <span id="display_firstword"></span> <br>
+        Question 1 Second Word:  <span id="display_secondword"></span> <br>
+        Question 2:       <span id="display_question2"></span> <br>
+        Question 3:    <span id="display_question3"></span> <br>
+        <button onclick="AccessDeniedAway()" onmouseup ="AccessGrantedAppear()" onmousedown = "ShowButtons3()">Submit Data</button>
+        <br>
+        <br>
+        <input id = "HelpButton4" type = "button" value = "Javascript Quiz 4 Help Page" style="visibility:hidden" onclick="JavaScriptQuiz4Help()"> </input>
+        <br>
+        <br>
+        <input id = "RestartButton4" type = "button" value = "Restart Javascript Quiz 4" style="visibility:hidden" onclick="JavaScriptQuiz4RestartTest()"> </input>
+    </div>
+    </div>
+
+</form>
+
+
+<script src ="js/JavaScriptQuiz4.js"></script>
+<script src ="js/JavaScriptQuiz4.2.js"></script>
+
+</body>
+</html>

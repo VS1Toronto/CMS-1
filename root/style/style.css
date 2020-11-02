@@ -1,0 +1,429 @@
+body { margin: 0px; font-family: Tahoma, Geneva, sans-serif; font-size: 16px;}
+
+#pageTop 
+{
+	background:url(headerSliver.png) repeat-x;
+	height: 90px;
+}
+
+#pageTop > #pageTopWrap 
+{
+	width: 1000px;
+	margin: 0px auto;
+	height: 90px;
+}
+
+#pageTop > #pageTopWrap > #pageTopLogo 
+{
+	float: left;
+	height: 90px;
+	width: 108px;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest 
+{
+	float: left;
+	height: 90px;
+	width: 892px;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu1 
+{
+	height: 44px;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu1 > div 
+{
+	margin-top: 8px;
+	padding: 4px;
+	text-align: right;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu1 > div > a 
+{
+	color:#CCC;
+	text-decoration: none;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu1 > div > a:hover 
+{
+	color:#C0E73D;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu2 
+{
+	height: 44px;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu2 > div 
+{
+	margin-top: 2px;
+	padding: 4px;
+	text-align:right;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu2 > div > a 
+{
+	display: block;
+	float: left;
+	color:#CCC;
+	text-decoration: none;
+	margin: 0px 24px;
+}
+
+#pageTop > #pageTopWrap > #pageTopRest > #menu2 > div > a:hover 
+{
+	color:#C0E73D;
+}
+
+
+
+#pageLeft
+{
+
+}
+
+
+
+
+
+
+
+
+#pageMiddle
+{
+	width: 1000px;
+	height: 1010px;
+    margin: 0px auto;
+    position:relative;
+    padding-bottom: 50px;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#photosPageMiddle
+{
+	width: 1000px;
+	height: 1010px;
+    margin: 0px auto;
+    position:relative;
+}
+
+#photos
+{
+	width: 1000px;
+	margin: 0px auto;
+	height: 650px;
+    position:relative;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#statusarea
+{
+	width: 1000px;
+	height: 500px;
+    margin: 0px auto;
+    position:relative;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    overflow: auto;
+}
+
+#gamesstatusarea
+{
+	width: 50px;
+	height: 500px;
+    margin: 0px auto;
+    position:relative;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    overflow: auto;
+}
+
+
+
+
+
+
+#notesBox
+{
+	width: 1000px;
+	margin: 0px auto;
+	height: 500px;
+    position:relative;
+    overflow: auto;
+}
+
+
+#friendReqBox
+{
+	width: 1000px;
+	margin: 0px auto;
+	height: 500px;
+    position:relative;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+#pageBottom
+{
+    background: #404040;
+	font-size:12px;
+	color: #CCC;
+	text-align: center;
+    margin: 0px auto;
+    position:relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+#signupPageMiddle
+{
+	width: 1000px;
+	height: 1010px;
+    margin: 0px auto;
+    position:relative;
+    padding-bottom: 50px;
+} 
+
+
+
+
+
+
+
+
+#loginPageMiddle
+{
+	width: 1000px;
+	height: 1010px;
+    margin: 0px auto;
+    position:relative;
+    padding-bottom: 50px;
+} 
+
+
+
+
+
+
+
+
+
+#userPageMiddle
+{
+	width: 1000px;
+	height: 1010px;
+    margin: 0px auto;
+    position:relative;
+    padding-bottom: 50px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gamePageMiddle
+{
+	width: 1000px;
+	height: 2000px;
+    margin: 0px auto;
+    position:relative;
+    padding-bottom: 50px;
+
+}    
+
+
+#pageMiddle_Game_Container
+{
+
+}
+
+#description_Game_Container
+{	
+
+}
+
+#search_container
+{
+
+	float: left;
+	height: 1500px;
+	width: 450px;
+    position:relative;
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+
+
+
+
+
+#croc_runner_showcase
+{
+	margin-left: 450px;
+}
+
+#the_break_up_showcase
+{
+	margin-left: 450px;
+}
+
+#space_war_showcase
+{
+	margin-left: 450px;
+}
+
+#code_blue_showcase
+{
+	margin-left: 450px;
+}
+
+
+
+
+
+
+#notificaionsPageMiddle
+{
+	width: 1000px;
+	height: 1010px;
+    margin: 0px auto;
+    position:relative;
+    padding-bottom: 50px;
+} 
+
+#notificatinsSeperator
+{
+
+}
+
+
+
+
+
+
+
+#searchBar
+{
+	border: 1px solid #000000;
+	border-right: none;
+	margin-top: -8px;
+	margin-right: 0px;
+	font-size: 16px;
+	padding: 8px;
+	outlining:none;
+	width: 250px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#searchBtn
+{
+	border: 1px solid #000000;
+	font-size: 16px;
+	margin-top: -8px;
+	margin-right: 0px;
+	padding: 8px;
+	background: #8F8F8F;
+	font-weight: bold;
+	cursor: pointer;
+	outline: none;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#searchBtn:hover
+{
+ border:1px solid #74bf36;
+ background-color: #8ed058; background-image: -webkit-gradient(linear, left top, left bottom, from(#8ed058), to(#7bb64b));
+ background-image: -webkit-linear-gradient(top, #8ed058, #7bb64b);
+ background-image: -moz-linear-gradient(top, #8ed058, #7bb64b);
+ background-image: -ms-linear-gradient(top, #8ed058, #7bb64b);
+ background-image: -o-linear-gradient(top, #8ed058, #7bb64b);
+ background-image: linear-gradient(to bottom, #8ed058, #7bb64b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8ed058, endColorstr=#1bb64b);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title></title>
+    
+    <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+
+    <script src ="js/BonusLevel.js"></script>
+    <script src ="js/BonusLevel2.js"></script>  
+    
+    
+    <link rel="stylesheet" href="css/BonusLevel.css">
+    
+ 
+    
+    
+    
+<style type="text/css">
+.button_example{
+border:1px solid #34740e; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; font-size:12px;font: small-caps bold small/24px "Times New Roman", serif; padding: 10px 10px 10px 10px; text-align: center; text-decoration:none; list-style-type: none;
+        display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #c5bb83; border-bottom: 4px solid #8C0000;
+ background-color: #2146FF; background-image: -webkit-gradient(linear, left top, left bottom, from(#2146FF), to(#1c5a85));
+ background-image: -webkit-linear-gradient(top, #2146FF, #1c5a85);
+ background-image: -moz-linear-gradient(top, #2146FF, #1c5a85);
+ background-image: -ms-linear-gradient(top, #2146FF, #1c5a85);
+ background-image: -o-linear-gradient(top, #2146FF, #1c5a85);
+ background-image: linear-gradient(to bottom, #2146FF, #1c5a85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2146FF, endColorstr=#1c5a85);
+}
+
+.button_example:hover{
+ border:1px solid #26759E;
+ background-color: #0027ed; background-image: -webkit-gradient(linear, left top, left bottom, from(#0027ed), to(#133d5b));
+ background-image: -webkit-linear-gradient(top, #0027ed, #133d5b);
+ background-image: -moz-linear-gradient(top, #0027ed, #133d5b);
+ background-image: -ms-linear-gradient(top, #0027ed, #133d5b);
+ background-image: -o-linear-gradient(top, #0027ed, #133d5b);
+ background-image: linear-gradient(to bottom, #0027ed, #133d5b);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#0027ed, endColorstr=#133d5b);
+}
+</style> 
+
+
+    
+  
+
+
+<script>
+function ajax_json_gallery(folder){
+    
+    
+
+	var background = document.getElementById("background");
+	
+    var hr = new XMLHttpRequest();
+    hr.open("POST", "aquire_folder_content.php", true);
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			background.innerHTML = "<img src='"+data.img1.src+"'>";
+
+	    }
+    }
+    hr.send("folder="+folder);
+
+}
+</script>
+
+
+    
+</head>
+<body>
+     
+    
+<div id="background">
+</div>
+
+
+<script>
+    ajax_json_gallery('background_image_5');
+</script>   
+
+
+
+
+<div id = "div0"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Star Trek Quiz!</h1></div>
+
+
+<div id = "div0">
+<div id="navcontainer" style="margin-top:40px; padding:0px;">
+    <ol id="navlist">
+        <li><a class="button_example" href="../../index.php" title="link to Beerman" style="height:10px; width:130px">CMS 1</a></li>
+    </ol>
+</div>    
+</div>
+
+
+<form name ="StarTrekQuiz">
+    <ol>
+        <div id ="div1-1">
+            <audio controls>
+                <source src="audio/Relentless.mp3">
+            </audio>
+        </div>
+        <div id = "div1">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Who are The Ultimate Enemy?</h3></li>
+            <div id = "div2">
+                <input id = "hint13" type = "button" value = "hint" onmousedown="showHint13()" onmouseup ="showHint13Hide()"> </input>
+                <img id="BonusLevelClue1.jpg"src = "img/BonusLevel/BonusLevelClue1.jpg" style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button21" type = "button" value = "Klingon" onClick  ="sayFalse()" onmouseup ="Hidden13()" >  </input>
+
+                    <input id = "button22" type = "button" value = "Borg" onClick  ="sayTrue()" onmouseup ="Hidden13()" >  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-2">
+            <audio controls>
+                <source src="audio/FireAllWeapons.mp3">
+            </audio>
+        </div>
+        <div id = "div3">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Enterprise is Firing at who?</h3></li>
+            <div id = "div4">
+                <input id = "hint14" type = "button" value = "hint" onmousedown="showHint14()" onmouseup ="showHint14Hide()"> </input>
+                <img id="BonusLevelClue2.jpg"src = "img/BonusLevel/BonusLevelClue2.jpg"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button23" type = "button" value = "Borg" onClick  ="sayTrue()" onmouseup ="Hidden14()"> </input>
+
+                    <input id = "button24" type = "button" value = "Romulan" onClick  ="sayFalse()" onmouseup ="Hidden14()"> </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-3">
+            <audio controls>
+                <source src="audio/Selfdestruct.mp3">
+            </audio>
+        </div>
+        <div id = "div5">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>The official declaration of a bad day?</h3></li>
+            <div id = "div6">
+                <input id = "hint15" type = "button" value = "hint" onmousedown="showHint15()"  onmouseup ="showHint15Hide()"> </input>
+                <img id="BonusLevelClue3.jpg"src = "img/BonusLevel/BonusLevelClue3.jpg"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button25" type = "button" value = "Surge" onClick  ="sayFalse()" onmouseup ="Hidden15()"> </input>
+
+                    <input id = "button26" type = "button" value = "Breach" onClick  ="sayTrue()" onmouseup ="Hidden15()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-4">
+            <audio controls>
+                <source src="audio/Trapped.mp3">
+            </audio>
+        </div>
+        <div id = "div7">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Enterprise held how?</h3></li>
+            <div id = "div8">
+                <input id = "hint16" type = "button" value = "hint" onmousedown="showHint16()"  onmouseup ="showHint16Hide()"> </input>
+                <img id="BonusLevelClue4.jpg"src = "img/BonusLevel/BonusLevelClue4.jpg"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button27" type = "button" value = "Drained" onClick  ="sayTrue()" onmouseup ="Hidden16()">  </input>
+
+                    <input id = "button28" type = "button" value = "Magnets" onClick  ="sayFalse()" onmouseup ="Hidden16()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-5">
+            <audio controls>
+                <source src="audio/Intervene.mp3">
+            </audio>
+        </div>
+        <div id = "div9">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Enterprise fought this battle?</h3></li>
+            <div id = "div10">
+                <input id = "hint17" type = "button" value = "hint" onmousedown="showHint17()" onmouseup ="showHint17Hide()"> </input>
+                   <img id="BonusLevelClue5.jpg"src = "img/BonusLevel/BonusLevelClue5.jpg" style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button29" type = "button" value = "Charged" onClick  ="sayFalse()" onmouseup ="Hidden17()">  </input>
+
+                    <input id = "button30" type = "button" value = "Seperated" onClick  ="sayTrue()" onmouseup ="Hidden17()">  </input>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id ="div1-6">
+            <audio controls>
+                <source src="audio/Inteception.mp3">
+            </audio>
+        </div>
+        <div id = "div11">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>How many minds in a Borg?</h3></li>
+            <div id = "div12">
+                <input id = "hint18" type = "button" value = "hint" onmousedown="showHint18()" onmouseup ="showHint18Hide()"> </input>
+                <img id="BonusLevelClue6.jpg"src = "img/BonusLevel/BonusLevelClue6.jpg" style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button31" type = "button" value = "One" onClick  ="sayFalse()" onmouseup ="Hidden18()">  </input>
+
+                    <input id = "button32" type = "button" value = "Many" onClick  ="sayTrue()" onmouseup ="Hidden18()">  </input>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id ="div1-7">
+            <audio controls>
+                <source src="audio/Lacutas.mp3">
+            </audio>
+        </div>
+        <div id = "div13">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Renamed him after assimilation?</h3></li>
+            <div id = "div14">
+                <input id = "hint19" type = "button" value = "hint" onmousedown="showHint19()"  onmouseup ="showHint19Hide()"> </input>
+                <img id="BonusLevelClue7.jpg"src = "img/BonusLevel/BonusLevelClue7.jpg"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button33" type = "button" value = "Lacutas" onClick  ="sayTrue()" onmouseup ="Hidden19()"> </input>
+
+                    <input id = "button34" type = "button" value = "LaForge" onClick  ="sayFalse()" onmouseup ="Hidden19()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-8">
+            <audio controls>
+                <source src="audio/ChancellorGowron.mp3">
+            </audio>
+        </div>
+        <div id = "div15">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Chancellor of the Klingon Empire?</h3></li>
+            <div id = "div16">
+                <input id = "hint20" type = "button" value = "hint" onmousedown="showHint20()"  onmouseup ="showHint20Hide()"> </input>
+                    <img id="BonusLevelClue8.jpg"src = "img/BonusLevel/BonusLevelClue8.jpg"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button35" type = "button" value = "Gowron" onClick  ="sayTrue()" onmouseup ="Hidden20()">  </input>
+
+                    <input id = "button36" type = "button" value = "Korn" onClick  ="sayFalse()" onmouseup ="Hidden20()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-9">
+            <audio controls>
+                <source src="audio/GulDukat.mp3">
+            </audio>
+        </div>
+        <div id = "div17">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>First initials of the two Cardassians?</h3></li>
+            <div id = "div18">
+                <input id = "hint21" type = "button" value = "hint" onmousedown="showHint21()"  onmouseup ="showHint21Hide()"> </input>
+                    <img id="BonusLevelClue9.jpg"src = "img/BonusLevel/BonusLevelClue9.jpg"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button37" type = "button" value = "II" onClick  ="sayFalse()" onmouseup ="Hidden21()"> </input>
+
+                    <input id = "button38" type = "button" value = "GD" onClick  ="sayTrue()" onmouseup ="Hidden21()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-10">
+            <audio controls>
+                <source src="audio/Garak.mp3">
+            </audio>
+        </div>
+        <div id = "div19">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Who is the spy sent to DS9?</h3></li>
+            <div id = "div20">
+                <input id = "hint22" type = "button" value = "hint" onmousedown="showHint22()"  onmouseup ="showHint22Hide()"> </input>
+                    <img id="BonusLevelClue10.jpg"src = "img/BonusLevel/BonusLevelClue10.jpg"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button39" type = "button" value = "Enabran" onClick  ="sayFalse()" onmouseup ="Hidden22()">  </input>
+
+                    <input id = "button40" type = "button" value = "Garak" onClick  ="sayTrue()" onmouseup ="Hidden22()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-11">
+            <audio controls>
+                <source src="audio/LookBeautiful.mp3">
+            </audio>
+        </div>
+        <div id = "div21">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Worf's wife?</h3></li>
+            <div id = "div22">
+                <input id = "hint23" type = "button" value = "hint" onmousedown="showHint23()"  onmouseup ="showHint23Hide()"> </input>
+                    <img id="BonusLevelClue11.jpg"src = "img/BonusLevel/BonusLevelClue11.jpg"   style="visibility:hidden;"></input>
+                <ul>
+                    <input id = "button41" type = "button" value = "Lursa" onClick  ="sayFalse()" onmouseup ="Hidden23()"> </input>
+
+                    <input id = "button42" type = "button" value = "Klar" onClick  ="sayTrue()" onmouseup ="Hidden23()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id ="div1-12">
+            <audio controls>
+                <source src="audio/Humanity.mp3">
+            </audio>
+        </div>
+        <div id = "div23">
+            <li style="margin-left: 20px; list-style:none!important;"><h3>Borg supermodel?</h3></li>
+            <div id = "div24">
+                <input id = "hint24" type = "button" value = "hint" onmousedown="showHint24()"  onmouseup ="showHint24Hide()"> </input>
+                    <img id="BonusLevelClue12.png"src = "img/BonusLevel/BonusLevelClue12.png"  style="visibility:hidden;"> </input>
+                <ul>
+                    <input id = "button43" type = "button" value = "Seven" onClick  ="sayTrue()" onmouseup ="Hidden24()">  </input>
+
+                    <input id = "button44" type = "button" value = "Eight" onClick  ="sayFalse()" onmouseup ="Hidden24()">  </input>
+                </ul>
+            </div>
+        </div>
+    </ol>
+
+    <div id = "div25">
+        <input id = "HelpButton4" type = "button" value = "Star Trek Help Page" style="visibility:hidden" onclick="StarTrekHelp()"> </input>
+        <input id = "RestartButton4" type = "button" value = "Restart Star Trek Quiz" style="visibility:hidden" onclick="RestartStarTrekTest()"> </input>
+        <input type = "button" value = "hello" onClick  ="sayHi()">  </input>
+        <input type = "reset" value = "clear">  </input>
+        <textArea rows = "2" cols = "40" name ="answersBox">The correct answers will display here</textArea>
+        <br>
+        <br>
+
+    </div>
+
+</form>
+
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+
+<script src ="js/BonusLevel.js"></script>
+<script src ="js/BonusLevel2.js"></script>
+
+
+</body>
+</html>

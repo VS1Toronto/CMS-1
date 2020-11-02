@@ -1,0 +1,12 @@
+#pageFooter
+{
+    background: #404040;
+	font-size:12px;
+	color: #CCC;
+	text-align: center;
+    margin: 0px auto;
+    position:relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+}

@@ -1,0 +1,71 @@
+body,
+
+html 
+{
+    min-height: 100%;
+}
+
+
+
+div#navcontainer
+{
+    position: relative;
+    font: small-caps bold small/24px "Times New Roman", serif;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+
+
+#div0
+{
+    width:2000px;
+    height:30px;
+    font-size: 30px;
+    font-style: italic;
+    position:absolute;
+    top:5px;
+    left:280px;
+}
+
+
+div#test
+{
+    font-size: 20px;
+    font-style: normal;
+    border:#000 1px solid;
+    padding:10px 40px 40px 40px;
+    width:800px;
+    height:250px;
+    left:20px;
+    position:absolute;
+
+}
+
+div#HintButtons
+{
+    position:absolute;
+    top:420px;
+    left:280px;
+}
+
+div#ShowHints
+{
+    position:absolute;
+    top:10px;
+    left:780px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

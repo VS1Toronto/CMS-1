@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+    <link rel="stylesheet" href="css/JavaScriptQuiz2.css">
+
+
+
+
+
+<style type="text/css">   
+.button_example{
+border:1px solid #34740e; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px; font-size:12px;font: small-caps bold small/24px "Times New Roman", serif; padding: 10px 10px 10px 10px; text-align: center; text-decoration:none; list-style-type: none;
+        display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #c5bb83; border-bottom: 4px solid #845108;
+ background-color: #001000; background-image: -webkit-gradient(linear, left top, left bottom, from(#005900), to(#008c00));
+ background-image: -webkit-linear-gradient(top, #001000, #008c00);
+ background-image: -moz-linear-gradient(top, #001000, #008c00);
+ background-image: -ms-linear-gradient(top, #001000, #008c00);
+ background-image: -o-linear-gradient(top, #001000, #008c00);
+ background-image: linear-gradient(to bottom, #001000, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+}
+
+.button_example:hover{
+ border:1px solid #224b09;
+ background-color: #36780f; background-image: -webkit-gradient(linear, left top, left bottom, from(#36780f), to(#005900)); color: #FFFFFF;
+ background-image: -webkit-linear-gradient(top, #005900, #005900);
+ background-image: -moz-linear-gradient(top, #005900, #005900);
+ background-image: -ms-linear-gradient(top, #005900, #005900);
+ background-image: -o-linear-gradient(top, #005900, #005900);
+ background-image: linear-gradient(to bottom, #005900, #005900);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#36780f, endColorstr=#005900);border-bottom: 4px solid #845108;
+}
+</style>
+
+
+
+
+
+
+<script>
+function ajax_json_gallery(folder){
+    
+    
+
+	var background = document.getElementById("background");
+	
+    var hr = new XMLHttpRequest();
+    hr.open("POST", "aquire_folder_content.php", true);
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var data = JSON.parse(hr.responseText);
+			background.innerHTML = "<img src='"+data.img1.src+"'>";
+
+	    }
+    }
+    hr.send("folder="+folder);
+
+}
+</script> 
+
+
+
+</head>
+<body>
+    
+    
+<div id="background">
+</div>
+
+
+<script>
+    ajax_json_gallery('background_image_2');
+</script>
+   
+
+<div id = "div0"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Javascript Quiz 2!</h1></div>
+
+
+<div id = "div0">
+<div id="navcontainer">
+    <ol id="navlist">
+        <li><a class="button_example" href="../../index.php" title="link to Beerman" style="height:10px; width:130px">CMS 1</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz1.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 1</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz2.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 2</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz3.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 3</a></li>
+        <li><a class="button_example" href="JavaScriptQuiz4.html" title="link to Beerman" style="height:10px; width:130px">Javascript Quiz 4</a></li>
+    </ol>
+</div>
+</div>
+
+
+<form name ="JavaScriptQuiz2Quiz">
+    <ol>
+        <div id = "div1">
+            <li><h3>Node.js is a server side javaScript implementation?</h3></li>
+
+            <div id = "div2">
+                <input id = "hint5" type = "button" value = "hint" onclick="showHint5()"> </input>
+                <img id="Node.js.png"src = "img/JavaScriptQuiz2/Node.js.png" style="visibility:hidden"> </input>
+                <ul>
+                    <input id = "button5" type = "button" value = "True" onClick  ="sayTrue()" onmouseup ="Hidden5()" >  </input>
+
+                    <input id = "button6" type = "button" value = "False" onClick  ="sayFalse()" onmouseup ="Hidden5()" >  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id = "div3">
+            <li><h3>In 1996 Microsoft added Javascript support in Internet Explorer?</h3></li>
+
+            <div id = "div4">
+                <input id = "hint6" type = "button" value = "hint" onclick="showHint6()"> </input>
+                <img id="JavascriptOnInternetExplorer.jpg"src = "img/JavaScriptQuiz2/JavascriptOnInternetExplorer.jpg"  style="visibility:hidden"> </input>
+                <ul>
+                    <input id = "button7" type = "button" value = "True" onClick  ="sayTrue()" onmouseup ="Hidden6()"> </input>
+
+                    <input id = "button8" type = "button" value = "False" onClick  ="sayFalse()" onmouseup ="Hidden6()"> </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id = "div5">
+            <li><h3>Released in 2011 Javascript 5.1 is the current<br>
+                ECMAScript standard?</h3></li>
+
+            <div id = "div6">
+                <input id = "hint7" type = "button" value = "hint" onclick="showHint7()"> </input>
+                <img id="EMAC5.1.jpg"src = "img/JavaScriptQuiz2/EMAC5.1.jpg"  style="visibility:hidden"> </input>
+                <ul>
+                    <input id = "button9" type = "button" value = "True" onClick  ="sayTrue()" onmouseup ="Hidden7()"> </input>
+
+                    <input id = "button10" type = "button" value = "False" onClick  ="sayFalse()" onmouseup ="Hidden7()">  </input>
+                </ul>
+            </div>
+        </div>
+
+        <div id = "div7">
+            <li><h3>After long denegration by programmers claiming Javascript was amatuerish<br>
+                    Ajax has brought Javascript to the fore again for web based applications<br>
+                    and has meant increased acceptance by mainstream programming?</h3></li>
+
+            <div id = "div8">
+                <input id = "hint8" type = "button" value = "hint" onclick="showHint8()"> </input>
+                <img id="AjaxJavascript.png"src = "img/JavaScriptQuiz2/AjaxJavascript.png"  style="visibility:hidden"> </input>
+                <ul>
+                    <input id = "button11" type = "button" value = "True" onClick  ="sayTrue()" onmouseup ="Hidden8()">  </input>
+
+                    <input id = "button12" type = "button" value = "False" onClick  ="sayFalse()" onmouseup ="Hidden8()">  </input>
+                </ul>
+            </div>
+        </div>
+    </ol>
+
+    <div id = "div9">
+        <input type = "button" value = "hello" onClick  ="sayHi()">  </input>
+        <input type = "reset" value = "clear">  </input>
+        <textArea rows = "10" cols = "50" name ="answersBox">The correct answers will display here</textArea>
+        <br>
+        <br>
+        <input id = "HelpButton2" type = "button" value = "Javascript Quiz 2 Help Page" style="visibility:hidden" onclick="JavaScriptQuiz2Help()"> </input>
+        <br>
+        <br>
+        <input id = "RestartButton2" type = "button" value = "Restart Javascript Quiz 2 Quiz" style="visibility:hidden" onclick="JavaScriptQuiz2RestartTest()"> </input>
+    </div>
+
+</form>
+
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+
+<script src ="js/JavaScriptQuiz2.js"></script>
+<script src ="js/JavaScriptQuiz2.2.js"></script>
+<link rel="stylesheet" href="css/JavaScriptQuiz2.css">
+
+</body>
+</html>
